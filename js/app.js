@@ -11,6 +11,19 @@
 //Write your code below this line:
 
 
+let exercises = 
+['Push-ups', 'Sit-ups', 'Bear Crawls', '1 mile run', '60 second plank', 'Burpees', 'Jumping Jacks', 'Squats', 'Weighted Squats', 'Inch Worms'];
+
+function randomExercises(number) {
+    let arr = [];
+    for (i = 0; i < number; i++) {
+        const getExercise = exercises[Math.floor(Math.random() * exercises.length)];
+        arr.push(getExercise);
+    }
+    console.log(arr);
+}
+
+randomExercises(5);
 
 
 
@@ -27,6 +40,23 @@
 
 //Write your code below this line
 
+ function GenBuzz (myNumber) {
+
+    for (i = 0; i < myNumber; i++) {
+        if (typeof myNumber !== 'number') {
+            console.log('This is not a number');
+        } else if (myNumber % 3 === 0 && myNumber % 5 === 0) {
+            console.log('GenBuzz');
+        } else if (myNumber % 3 === 0) {
+            console.log('Gen');
+        } else if (myNumber % 5 === 0) {
+            console.log('Buzz');
+        } else {
+            console.log(myNumber);
+        }
+    }
+}
+GenBuzz(15); 
 
 
 
@@ -43,4 +73,29 @@
 //      * Socks- $2
 //      * If the variable input is not an item in the store, then print 'Invalid Item' to the console.
 
-//Write your code below this line:
+//Write your code below this line
+
+// let clothingItem = 'jeans';
+
+function getPrice (clothingItem) {
+
+    switch (clothingItem) {
+        case 'shoes' :
+            console.log('Shoes are $50');
+            break;
+        case 'jeans' :
+            console.log('jeans are $25');
+            break;
+        case 'hat' :
+            console.log('Hats are $12');
+            break;
+        case 'socks' :
+            console.log('Socks are $2');
+            break;
+        default :
+            console.log('Invalid item');
+            break;
+    }
+}
+
+getPrice('shoes');
